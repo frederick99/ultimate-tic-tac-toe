@@ -4,3 +4,8 @@ INSTRUCTIONS
 2. cd to the root directory (contains index.js).
 3. Run command.
     node index.js
+
+DEPENDENCIES
+
+1. ws
+    npm install ws
