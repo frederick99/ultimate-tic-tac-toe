@@ -1,0 +1,17 @@
+{
+  "name": "node-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Naveen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "joi": "^13.7.0",
+    "nodemon": "^1.18.4",
+    "ws": "^6.1.0"
+  }
+}

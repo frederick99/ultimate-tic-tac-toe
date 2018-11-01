@@ -1,0 +1,144 @@
+// output: $1.html
+title Ultimate tic-tac-toe
+link(rel="stylesheet", href="main.min.css")
+
+#root
+  section.start.visible
+    .outer
+      .button.play Play
+      .button.about About
+      .button.exit Exit
+  
+  section.play
+    .outer
+      .button.newgame New Game
+      .button.joingame Join Game
+      .button.back Back
+  
+  section.about
+    .outer
+      h1 About
+      p Ultimate tic-tac-toe is a modified version of 3*3 Tic tac toe board game. It is composed of nine independent tic-tac-toe boards arranged in a 3-by-3 grid.
+      .button.rules How to play
+      .button.back Back
+
+  section.rules
+    .outer
+      h1 How to play
+      p Definitions
+      dl
+        dt Local board
+        dd each small 3-by-3 tic-tac-toe board
+        dt Global board
+        dd the larger 3-by-3 board
+      p Rules
+      ul
+        li The game starts with X playing wherever they want in any of the 81 empty spots.
+        li This move 'sends' their opponent to its relative location on the Global Board as per the previous move.
+        li The game proceeds till one of the players has captured 3 local boards in a row (up, down, across, or diagonally). This player is declared as the winner.
+        li When all 9 local boards are captured, the game is over. If no player has captured 3 local boards in a row, the game ends in a tie.
+      .button.back Back
+
+  section.exit
+    .outer
+      p Are you sure you want to stop playing now?
+      .button.really-exit Yes
+      .button.back No, take me back!
+  
+  section.newgame
+    .outer
+      p Your secret passcode:
+      .passcode &nbsp;
+
+      .waiting connecting...
+      .button.back Cancel
+
+  section.joingame
+    .outer
+      p Enter passcode:
+      input#pw.passcode(type="text", required)
+      .button.join Join
+      .button.back Back
+
+  section.game
+    .menu-wrapper
+      .menu-button
+        .hamburger
+          .top
+          .middle
+          .bottom
+    .board
+      .grid.z-1
+        .box-results
+          each _ in Array(9)
+            .box
+        .h
+          each _ in Array(6)
+            .hl
+        .v
+          each _ in Array(6)
+            .vl
+        .hl1
+        .hl2
+        .vl1
+        .vl2
+        .halo
+      each _ in Array(81)
+        .cell
+          span
+
+  .popUp
+
+  .modal-wrapper
+    .modal.get-name
+      .header What was your name again?
+      .body
+        input#get-name(type="text")
+      .button Continue
+
+    .modal.error
+      .header Error
+      p.body
+      .button.ok OK
+
+    .modal.results.won
+      .master
+        .emote 🤩
+        p Congratulations! You won!
+      .buttons
+        .button.back-to-main Back to home
+        .button.play-again Play again
+
+    .modal.results.lost
+      .master
+        .emote 😭
+        p You're not a loser; just winningly challenged...
+      .buttons
+        .button.back-to-main Back to home
+        .button.play-again Play again
+
+    .modal.results.draw
+      .master
+        .emote 😮
+        p It's a draw
+      .buttons
+        .button.back-to-main Back to home
+        .button.play-again Play again
+
+    .modal.results.abandoned
+      .master
+        .emote 😑
+        p What a wuss
+      p.mono Your opponent left.
+      .button.back-to-main Back to home
+
+    .modal.pause-menu
+      h1 Menu
+      .button.resume Resume
+      // .button.change-name?
+      .button.exit Exit
+
+
+script(src="jquery.js")
+//- script(src="localforage.js")
+script(src="script.js")

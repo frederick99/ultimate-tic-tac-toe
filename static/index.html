@@ -1,0 +1,259 @@
+
+<title>Ultimate tic-tac-toe</title>
+<link rel="stylesheet" href="main.min.css"/>
+<div id="root">
+  <section class="start visible">
+    <div class="outer">
+      <div class="button play">Play</div>
+      <div class="button about">About</div>
+      <div class="button exit">Exit</div>
+    </div>
+  </section>
+  <section class="play">
+    <div class="outer">
+      <div class="button newgame">New Game</div>
+      <div class="button joingame">Join Game</div>
+      <div class="button back">Back</div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="outer">
+      <h1>About</h1>
+      <p>Ultimate tic-tac-toe is a modified version of 3*3 Tic tac toe board game. It is composed of nine independent tic-tac-toe boards arranged in a 3-by-3 grid.</p>
+      <div class="button rules">How to play</div>
+      <div class="button back">Back</div>
+    </div>
+  </section>
+  <section class="rules">
+    <div class="outer">
+      <h1>How to play</h1>
+      <p>Definitions</p>
+      <dl>
+        <dt>Local board</dt>
+        <dd>each small 3-by-3 tic-tac-toe board</dd>
+        <dt>Global board</dt>
+        <dd>the larger 3-by-3 board</dd>
+      </dl>
+      <p>Rules</p>
+      <ul>
+        <li>The game starts with X playing wherever they want in any of the 81 empty spots.</li>
+        <li>This move 'sends' their opponent to its relative location on the Global Board as per the previous move.</li>
+        <li>The game proceeds till one of the players has captured 3 local boards in a row (up, down, across, or diagonally). This player is declared as the winner.</li>
+        <li>When all 9 local boards are captured, the game is over. If no player has captured 3 local boards in a row, the game ends in a tie.</li>
+      </ul>
+      <div class="button back">Back</div>
+    </div>
+  </section>
+  <section class="exit">
+    <div class="outer">
+      <p>Are you sure you want to stop playing now?</p>
+      <div class="button really-exit">Yes</div>
+      <div class="button back">No, take me back!</div>
+    </div>
+  </section>
+  <section class="newgame">
+    <div class="outer">
+      <p>Your secret passcode:</p>
+      <div class="passcode">&nbsp;</div>
+      <div class="waiting">connecting...</div>
+      <div class="button back">Cancel</div>
+    </div>
+  </section>
+  <section class="joingame">
+    <div class="outer">
+      <p>Enter passcode:</p>
+      <input id="pw" type="text" required="required" class="passcode"/>
+      <div class="button join">Join</div>
+      <div class="button back">Back</div>
+    </div>
+  </section>
+  <section class="game">
+    <div class="menu-wrapper">
+      <div class="menu-button">
+        <div class="hamburger">
+          <div class="top"></div>
+          <div class="middle"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+    </div>
+    <div class="board">
+      <div class="grid z-1">
+        <div class="box-results">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div class="h">
+          <div class="hl"></div>
+          <div class="hl"></div>
+          <div class="hl"></div>
+          <div class="hl"></div>
+          <div class="hl"></div>
+          <div class="hl"></div>
+        </div>
+        <div class="v">
+          <div class="vl"></div>
+          <div class="vl"></div>
+          <div class="vl"></div>
+          <div class="vl"></div>
+          <div class="vl"></div>
+          <div class="vl"></div>
+        </div>
+        <div class="hl1"></div>
+        <div class="hl2"></div>
+        <div class="vl1"></div>
+        <div class="vl2"></div>
+        <div class="halo"></div>
+      </div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+      <div class="cell"><span></span></div>
+    </div>
+  </section>
+  <div class="popUp"></div>
+  <div class="modal-wrapper">
+    <div class="modal get-name">
+      <div class="header">What was your name again?</div>
+      <div class="body">
+        <input id="get-name" type="text"/>
+      </div>
+      <div class="button">Continue</div>
+    </div>
+    <div class="modal error">
+      <div class="header">Error</div>
+      <p class="body"></p>
+      <div class="button ok">OK</div>
+    </div>
+    <div class="modal results won">
+      <div class="master">
+        <div class="emote">🤩</div>
+        <p>Congratulations! You won!</p>
+      </div>
+      <div class="buttons">
+        <div class="button back-to-main">Back to home</div>
+        <div class="button play-again">Play again</div>
+      </div>
+    </div>
+    <div class="modal results lost">
+      <div class="master">
+        <div class="emote">😭</div>
+        <p>You're not a loser; just winningly challenged...</p>
+      </div>
+      <div class="buttons">
+        <div class="button back-to-main">Back to home</div>
+        <div class="button play-again">Play again</div>
+      </div>
+    </div>
+    <div class="modal results draw">
+      <div class="master">
+        <div class="emote">😮</div>
+        <p>It's a draw</p>
+      </div>
+      <div class="buttons">
+        <div class="button back-to-main">Back to home</div>
+        <div class="button play-again">Play again</div>
+      </div>
+    </div>
+    <div class="modal results abandoned">
+      <div class="master">
+        <div class="emote">😑</div>
+        <p>What a wuss</p>
+      </div>
+      <p class="mono">Your opponent left.</p>
+      <div class="button back-to-main">Back to home</div>
+    </div>
+    <div class="modal pause-menu">
+      <h1>Menu</h1>
+      <div class="button resume">Resume</div>
+      <!-- .button.change-name?-->
+      <div class="button exit">Exit</div>
+    </div>
+  </div>
+</div>
+<script src="jquery.js"></script>
+<script src="script.js"></script>

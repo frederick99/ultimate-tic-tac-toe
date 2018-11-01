@@ -1,0 +1,19 @@
+[x] get name
+[x] get ip
+[x] highlight valid moves
+[x] quit button -- pause menu
+[x] you lose/win
+[x] play again? -- pause menu
+[x] reset server
+[x] per box results
+[x] serve web page files
+
+[ ] colored buttons - easy
+[x] local server not running -- similar
+[x] server not responding ----/
+
+Additional
+[ ] spectate feature
+
+Bugs
+[ ] handshake procedure is buggy
